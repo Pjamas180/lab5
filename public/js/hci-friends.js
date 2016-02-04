@@ -5,6 +5,7 @@ $(document).ready(function() {
 	initializePage();
 })
 
+
 /*
  * Function that is called when the document is ready.
  */
@@ -44,3 +45,9 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+$('.friend a').click(function(e) {
+	e.preventDefault();
+	console.log('is this working???');
+	$(this).text(anagrammedName($(this).text()));
+});
